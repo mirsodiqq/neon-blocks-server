@@ -1,0 +1,2 @@
+# The server uses only the Python standard library (Python 3.9 or newer).
+# Nothing to install. This file exists because some hosting platforms look for it.

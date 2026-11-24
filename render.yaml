@@ -1,0 +1,16 @@
+# Optional "Blueprint" for Render.com. Push the contents of this folder to a GitHub repository
+# (server.py in the repository root) and create a Blueprint from it.
+services:
+  - type: web
+    name: neon-blocks-server
+    runtime: python
+    plan: free                 # free instances sleep when idle; use "starter" for an always-on server
+    buildCommand: "echo nothing to build"
+    startCommand: "python3 server.py"
+    healthCheckPath: /health
+    envVars:
+      - key: PYTHON_VERSION
+        value: "3.12.3"
+      # Optional: only allow browsers from your own web build, e.g. https://yourname.itch.io
+      # - key: ALLOWED_ORIGINS
+      #   value: "https://example.com"
